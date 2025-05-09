@@ -34,12 +34,6 @@ function App() {
   }
 
   useEffect(() => {
-    const savedStats = localStorage.getItem("feedbackStats");
-    if (savedStats) {
-      setStats(JSON.parse(savedStats));
-    }
-  }, []);
-  useEffect(() => {
     localStorage.setItem("feedbackStats", JSON.stringify(stats));
   }, [stats]);
 
